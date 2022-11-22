@@ -16,6 +16,7 @@ static func popup_on_target(popup, target):
 
 		if usable_rect.encloses(cp_rect):
 			break
+	cp_rect.position += DisplayServer.window_get_position() as Vector2
 	popup.set_position(cp_rect.position)
 	popup.popup()
 
